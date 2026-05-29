@@ -5,4 +5,6 @@ tags: section
 bgColour: "#0e0c09"
 txtColour: "#ebe7e0"
 headingColour: white; 
+date: 2026-01-03
+
 ---

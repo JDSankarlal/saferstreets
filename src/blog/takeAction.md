@@ -5,5 +5,6 @@ description: Stay up to date on our actions and help us make Windsor safe for ev
 bgColour: "#c41c00"
 headingColour: white;
 txtColour: white;
+date: 2026-01-04
 --- 
 <p> Hello World </p>
