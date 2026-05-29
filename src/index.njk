@@ -1,0 +1,11 @@
+﻿--- 
+title: example
+layout: 'base.njk'
+--- 
+<section id = "main-sections">
+    <ul role = 'list'>
+        {%- for section in collections.section -%}
+        {% include 'section.njk' %}
+        {%- endfor -%}
+    </ul>
+</section>

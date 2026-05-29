@@ -1,0 +1,17 @@
+<header class="page-header">
+    <div class="container">
+      <div class="page-header__content">
+        <div>
+          <img src = "/assets/images/logo.svg"/ alt="Windsorites for Safe Streets Logo">
+        <nav>  
+          <ul role="list" class="nav-list flex-group">
+            {%- for page in collections.page | reverse -%}
+            <li>
+              <a href="{{ page.url }}">{{ page.data.name }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
