@@ -76,7 +76,7 @@ textarea:not([rows]) {
 }
 
 .section-regular{
-  padding: 200px;
+  padding: 120px;
   background-color: var(--bg);
   color: var(--txtcolour);
   margin-top: -8px;
@@ -159,3 +159,34 @@ textarea:not([rows]) {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.stats-container {
+    display: flex;
+    border-top: 1px solid rgb(17, 17, 17);
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+
+.stats-container-hero {
+    display: flex;
+    border-top: 1px solid rgb(255, 255, 255);
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+
+.stat {
+    flex: 1;
+    padding: 0.2rem;
+}
+
+.stat-value{
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.stat-label
+{
+  max-width: 300px;
+}
+

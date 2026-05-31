@@ -1,5 +1,5 @@
 <section class = "website-section">
-    {% if section.data.hero %} 
+{% if section.data.hero %} 
     <div
         class="hero-image"
         style="background-image: 
@@ -12,22 +12,42 @@
             <span class = "bold-text"> {{ section.data.title_bold }} </span>
         </h2>
         <p>{{ section.data.description }} </p>
+        {% if section.data.stats %}
+            <div class = "stats-container-hero">
+                {% for stat in section.data.stats %}
+                    <div class = "stat">
+                        <div class = "stat-value">{{ stat.value }}</div>
+                        <div class = "stat-label">{{ stat.label }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
-    {% else %}
+{% else %}
     <div 
         class = "section-regular"
         style="--bg: {{ section.data.bgColour }};
                 --hcolour: {{ section.data.headingColour }}
                 --txtcolour: {{ section.data.txtColour }}
-            "
-    >
-    
-        <h3 class = "section-title">
-            {{ section.data.title }}
-        </h3>
-        <p>{{ section.data.description }} </p>
+            ">
+    <h3 class = "section-title">
+        {{ section.data.title }}
+    </h3>
+    <p>{{ section.data.description }} </p>
+    {% if section.data.stats %}
+            <div class = "stats-container">
+                {% for stat in section.data.stats %}
+                    <div class = "stat">
+                        <div class = "stat-value">{{ stat.value }}</div>
+                        <div class = "stat-label">{{ stat.label }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
-    {% endif %}
-    {{content|safe}}
+{% endif %}
+
+{{content|safe}}
+
 </section>
 
